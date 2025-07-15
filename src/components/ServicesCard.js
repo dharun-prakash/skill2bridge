@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 
 const services = [
+  { title: "Diploma in Computer Application (DCA)" },
   { title: "Diploma in Computer Hardware Engineering" },
   { title: "Diploma in Computer Science" },
   { title: "Diploma in Computer Hardware and Networking" },
@@ -17,7 +18,7 @@ const services = [
   { title: "Diploma in Web Designing" },
   { title: "Diploma in Software Engineering" },
   { title: "Diploma in Fire and Safety Management" },
-  { title: "Diploma in Hotel and Catering Management" },
+  { title: "Diploma in Hotel and Catering Management (DHCM)" },
   { title: "Diploma in Business Management" },
   { title: "Diploma in Psychology" },
   { title: "Diploma in HR Management" },
@@ -67,6 +68,26 @@ const services = [
   { title: "Diploma in Early Childhood Care and Education" },
   { title: "Diploma in Montessori Teacher Training" },
   { title: "Diploma in Nursery Teacher Training" },
+  { title: "Diploma in Electrical & Electronic" },
+  { title: "Higher Diploma in Electrical & Electronic" },
+  { title: "Higher Diploma in Plumbing" },
+  { title: "Diploma in Metal Work" },
+  { title: "Higher Diploma in Metal Work" },
+  { title: "E-Commerce & Digital Marketing" },
+  { title: "Multimedia & Animation" },
+  { title: "Beauty Science & Cosmetology" },
+  { title: "Fashion Designing" },
+  { title: "Fine Arts" },
+  { title: "Marketing & Entrepreneurship" },
+  { title: "Physical & Fitness Training" },
+  { title: "Diploma in Hairdressing" },
+  { title: "Diploma in Culinary Arts" },
+  { title: "Higher Diploma in Culinary Arts" },
+  { title: "Higher Diploma in Hair Dressing" },
+  { title: "Diploma in Automobile" },
+  { title: "Higher Diploma in Automobile" },
+  { title: "Diploma in Mechanical Engineering" },
+  { title: "Higher Diploma in Mechanical Engineering" },
 ];
 
 const itemsPerPage = 8;
@@ -111,25 +132,6 @@ const ServicesCard = () => {
                   <Typography variant="h6" fontWeight="bold" color="#1A2A4F">
                     {service.title}
                   </Typography>
-                  {/* <Box mt={2}>
-                    <Link
-                      to={service.link}
-                      style={{
-                        textDecoration: "none",
-                        backgroundColor: "#E8C27D",
-                        color: "#0B1F3B",
-                        fontWeight: "bold",
-                        padding: "8px 16px",
-                        borderRadius: "6px",
-                        display: "inline-block",
-                        transition: "background 0.3s ease",
-                      }}
-                      onMouseEnter={(e) => (e.target.style.backgroundColor = "#C7A062")}
-                      onMouseLeave={(e) => (e.target.style.backgroundColor = "#E8C27D")}
-                    >
-                      Read More →
-                    </Link>
-                  </Box> */}
                 </CardContent>
               </Card>
             </Grid>
@@ -137,7 +139,12 @@ const ServicesCard = () => {
         </Grid>
         {/* Pagination Controls */}
         <Box display="flex" justifyContent="center" mt={4}>
-          <Pagination count={totalPages} page={page} onChange={handleChange} sx={{ "& .MuiPaginationItem-root": { color: "#E8C27D" } }} />
+          <Pagination
+            count={totalPages}
+            page={page}
+            onChange={handleChange}
+            sx={{ "& .MuiPaginationItem-root": { color: "#E8C27D" } }}
+          />
         </Box>
       </Box>
     </section>

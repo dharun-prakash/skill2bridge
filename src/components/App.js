@@ -7,6 +7,7 @@ import AdmissionForm from "./AdmissionForm";
 import Programmes from "./Programmes";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
+import Partners from "./Partners";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <About />
       <ServicesCard />
       <Programmes />
+      <Partners />
       <TrainingCards />
       <AdmissionForm />
       <Footer />

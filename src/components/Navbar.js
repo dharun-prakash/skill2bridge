@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
   IconButton,
   Drawer,
   List,
@@ -14,11 +13,14 @@ import {
   CssBaseline,
   Menu,
   MenuItem,
+  Box,
+  Typography,
 } from "@mui/material";
 import { Link } from "react-scroll";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import logo from "../Images/logo.jpeg"; // Import logo from assets
 
 function Navigation() {
   const theme = useTheme();
@@ -35,7 +37,6 @@ function Navigation() {
     { to: "home-section", label: "Home" },
     { to: "about-section", label: "About" },
     { to: "admission-section", label: "Admission-Form" },
-    // { to: "contact-section", label: "Contact" },
   ];
 
   const submenuLinks = [
@@ -56,10 +57,30 @@ function Navigation() {
       <CssBaseline />
       <AppBar position="fixed" sx={{ backgroundColor: "#001F3F", zIndex: theme.zIndex.drawer + 1 }}>
         <Container maxWidth="lg">
-          <Toolbar>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1, color: "#E8C27D" }}>
-              Skill2Bridge
-            </Typography>
+          <Toolbar sx={{ display: "flex", alignItems: "center" }}>
+            <Box sx={{ flexGrow: 1, display: "flex", alignItems: "center", gap: { xs: 1, md: 2 } }}>
+                            <img
+                src={logo}
+                alt="Skill2Bridge Logo"
+                style={{
+                  maxHeight: { xs: 30, md: 40 },
+                  maxWidth: "7%",
+                  objectFit: "contain",
+                }}
+              />
+              <Typography
+                variant="h6"
+                component="div"
+                sx={{
+                  color: "#E8C27D",
+                  fontSize: { xs: "1.2rem", md: "1.5rem" },
+                  fontWeight: "bold",
+                }}
+              >
+                Skill2Bridge
+              </Typography>
+
+            </Box>
             {isMobile ? (
               <IconButton edge="start" color="inherit" onClick={handleDrawerToggle} sx={{ color: "#FFD700" }}>
                 {drawerOpen ? <CloseIcon /> : <MenuIcon />}
@@ -72,14 +93,20 @@ function Navigation() {
                     to={link.to}
                     smooth={true}
                     duration={1000}
-                    style={{ cursor: "pointer", color: "#E8C27D", marginRight: 20 }}
+                    style={{ cursor: "pointer", color: "#E8C27D", marginRight: 20, textDecoration: "none" }}
                   >
                     {link.label}
                   </Link>
                 ))}
                 <Typography
                   onClick={handleSubMenuOpen}
-                  style={{ cursor: "pointer", color: "#E8C27D", display: "inline-flex", alignItems: "center" }}
+                  style={{
+                    cursor: "pointer",
+                    color: "#E8C27D",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    textDecoration: "none",
+                  }}
                 >
                   Programmes <ArrowDropDownIcon />
                 </Typography>
@@ -91,7 +118,7 @@ function Navigation() {
                 >
                   {submenuLinks.map((link, index) => (
                     <MenuItem key={index} onClick={handleSubMenuClose} sx={{ color: "#E8C27D" }}>
-                      <Link to={link.to} smooth={true} duration={1000} style={{ color: "#E8C27D" }}>
+                      <Link to={link.to} smooth={true} duration={1000} style={{ color: "#E8C27D", textDecoration: "none" }}>
                         {link.label}
                       </Link>
                     </MenuItem>
@@ -112,7 +139,23 @@ function Navigation() {
           {navLinks.map((link, index) => (
             <ListItem button key={index} onClick={() => setDrawerOpen(false)}>
               <ListItemText>
-                <Link to={link.to} smooth={true} duration={1000} style={{ color: "#FFD700" }}>
+                <Link to={link.to} smooth={true} duration={1000} style={{ color: "#FFD700", textDecoration: "none" }}>
+                  {link.label}
+                </Link>
+              </ListItemText>
+            </ListItem>
+          ))}
+          <ListItem button onClick={handleSubMenuOpen}>
+            <ListItemText>
+              <Typography style={{ color: "#FFD700", display: "inline-flex", alignItems: "center" }}>
+                Programmes <ArrowDropDownIcon />
+              </Typography>
+            </ListItemText>
+          </ListItem>
+          {submenuLinks.map((link, index) => (
+            <ListItem button key={index} onClick={() => setDrawerOpen(false)}>
+              <ListItemText>
+                <Link to={link.to} smooth={true} duration={1000} style={{ color: "#FFD700", textDecoration: "none", marginLeft: 16 }}>
                   {link.label}
                 </Link>
               </ListItemText>
