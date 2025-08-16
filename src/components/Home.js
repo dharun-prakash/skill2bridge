@@ -13,6 +13,9 @@ import image7 from "../Images/image7.jpeg";
 import image8 from "../Images/image8.jpeg";
 import image9 from "../Images/image9.jpeg";
 import image10 from "../Images/image10.jpeg";
+import image11 from "../Images/image11.jpeg";
+import image12 from "../Images/image12.jpg";
+import image13 from "../Images/image13.jpg";
 
 const Home = () => {
   return (
@@ -88,236 +91,45 @@ const Home = () => {
               maxWidth: "100%",
             }}
           >
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%", // Aspect ratio: (1066 / 1600) * 100%
-                }}
-              >
-                <img
-                  src={image1}
-                  alt="Skill2Bridge Event 1"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
+            {[
+              image1,
+              image2,
+              image3,
+              image4,
+              image5,
+              image6,
+              image7,
+              image8,
+              image9,
+              image10,
+              image11,
+              image12,
+              image13,
+            ].map((image, index) => (
+              <div key={index}>
+                <Box
+                  sx={{
+                    position: "relative",
                     width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
+                    paddingBottom: "66.625%", // Aspect ratio: (1066 / 1600) * 100%
                   }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image2}
-                  alt="Skill2Bridge Event 2"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image3}
-                  alt="Skill2Bridge Event 3"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image4}
-                  alt="Skill2Bridge Event 4"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image5}
-                  alt="Skill2Bridge Event 5"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image6}
-                  alt="Skill2Bridge Event 6"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image7}
-                  alt="Skill2Bridge Event 7"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image8}
-                  alt="Skill2Bridge Event 8"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image9}
-                  alt="Skill2Bridge Event 9"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
-            <div>
-              <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  paddingBottom: "66.625%",
-                }}
-              >
-                <img
-                  src={image10}
-                  alt="Skill2Bridge Event 10"
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    borderRadius: "8px",
-                  }}
-                />
-              </Box>
-            </div>
+                >
+                  <img
+                    src={image}
+                    alt={`Skill2Bridge Event ${index + 1}`}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "8px",
+                    }}
+                  />
+                </Box>
+              </div>
+            ))}
           </Carousel>
         </Box>
 
